@@ -38,7 +38,7 @@ function HomePage() {
             </Button>
           </div>
         ) : (
-          <Link to="/login">
+          <Link to="/write">
             <Button>Login</Button>
           </Link>
         )}
