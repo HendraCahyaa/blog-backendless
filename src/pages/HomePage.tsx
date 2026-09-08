@@ -52,11 +52,13 @@ function HomePage() {
         <div className="flex flex-row gap-16 justify-center items-center">
           {Blogs.map((blog) => {
             return (
-              <div key={blog.objectId} className="border-2 border-black p-8 ">
-                <p className="text-lg font-bold">{blog.title}</p>
-                <p>{blog.description}</p>
-                <p>{blog.author}</p>
-              </div>
+              <Link key={blog.objectId} to={`/blogs/${blog.objectId}`}>
+                <div className="border-2 border-black p-8 ">
+                  <p className="text-lg font-bold">{blog.title}</p>
+                  <p>{blog.description}</p>
+                  <p>{blog.author}</p>
+                </div>
+              </Link>
             );
           })}
         </div>
